@@ -284,6 +284,14 @@ window.addEventListener("hashchange", () => {
   etat.derniereRoute = route.vue;
 });
 
+// Retour au premier plan (app rouverte depuis l'écran d'accueil) : iOS ne recharge pas la page,
+// donc on redemande la position une fois, comme à l'ouverture. Jamais de suivi continu.
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "visible" || sim.actif) return;
+  if (maintenant() - (etat.derniereActualisation ?? 0) < 60000) return;
+  actualiser();
+});
+
 window.addEventListener("online", () => rendre());
 window.addEventListener("offline", () => rendre());
 

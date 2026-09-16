@@ -318,7 +318,7 @@ a.b:active{background:var(--fond-2)}
 .b-pause .cartouche{color:var(--bloc);margin-bottom:3px}
 .b-pause .panneau-km{margin-bottom:3px}
 .b-pause .panneau-km small{font-size:18px}
-.pause-ligne{display:grid;grid-template-columns:minmax(0,1fr) auto 24px;column-gap:10px;align-items:center;min-height:48px;margin-top:4px}
+.pause-ligne{display:grid;grid-template-columns:minmax(0,1fr) 24px;column-gap:10px;align-items:center;min-height:48px;margin-top:4px}
 .pause-ligne .pause-nom{font-size:18px;font-weight:700;line-height:1.2}
 .pause-h{font-size:16px;color:var(--encre-2);white-space:nowrap}
 .pause-h b{font-size:20px;color:var(--encre)}
@@ -330,6 +330,7 @@ a.b:active{background:var(--fond-2)}
 .ck-nom{font-size:17px;font-weight:700;line-height:1.25}
 .ck-h{font-size:19px;font-weight:700;white-space:nowrap;text-align:right}
 .ck.arrivee{border-top:2px solid var(--regle-arrivee)}
+a.ck:active{background:var(--fond-2)}
 /* États avant départ et arrivée, dans une case */
 .b .etat{padding:10px 12px}
 /* Bas de vue : lien « Rentrer en train » et crédits, posés sur le fond de page */

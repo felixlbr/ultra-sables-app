@@ -129,7 +129,7 @@ function casePause(ctx, pause) {
   const libelle = ctx.modePlan || ctx.avantDepart ? "arrivée prévue" : "arrivée";
   return `<a class="b b-pause" id="lien-pause" href="#/pause/${pause.n}">${titreCase("Prochaine pause")}<div class="b-in">`
     + panneau({ cartouche: `Pause ${pause.n}`, km: distancePanneau(ctx, pause), ville: pause.ville })
-    + `<div class="pause-ligne"><span class="pause-nom" id="pause-commerce">${esc(nomCommerce(c))}</span>`
+    + `<div class="pause-ligne">`
     + `<span class="pause-h">${libelle} <b id="pause-arrivee">${formatHeure(arr.estimee)}</b></span>${icone("droite")}</div>`
     + (sig ? `<p>${sig}</p>` : "")
     + `</div></a>`;
@@ -143,7 +143,7 @@ function caseCheckpoints(ctx, etat) {
     const p = etat.pausesParN.get(x.n);
     const i = rangPause(ctx.plan, x.n);
     const heure = ctx.modePlan ? arriveePause(ctx.plan, i) : heurePlan(ctx.plan, p.km) + ctx.eHeures;
-    lignes.push(`<li class="ck"><span class="ck-km">${Math.round(p.km)}</span><span class="ck-nom">${esc(p.ville)}</span><span class="ck-h">${formatHeure(heure)}</span></li>`);
+    lignes.push(`<li><a class="ck" href="#/pause/${p.n}"><span class="ck-km">${Math.round(p.km)}</span><span class="ck-nom">${esc(p.ville)}</span><span class="ck-h">${formatHeure(heure)}</span></a></li>`);
   }
   const prevueL = heurePlan(ctx.plan, ctx.L);
   const hL = ctx.modePlan ? prevueL : prevueL + ctx.eHeures;

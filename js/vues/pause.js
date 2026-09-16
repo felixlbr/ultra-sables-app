@@ -54,15 +54,7 @@ function tableHoraires(h, ctx) {
     corps = `<table class="horaires" id="horaires"><tbody><tr class="jour-j"><td>${libelle}</td><td>${texte}</td></tr></tbody></table>`;
   }
   const note = h && h.note ? `<p class="note">${esc(h.note)}</p>` : "";
-  let source = "";
-  if (h && h.source && h.source !== "aucune") {
-    if (h.source === "osm") source = "Horaires OpenStreetMap";
-    else {
-      const d = /^\d{4}-(\d{2})-(\d{2})$/.exec(h.verifie_le || "");
-      source = d ? `Horaires vérifiés le ${d[2]}/${d[1]}` : "Horaires vérifiés sur le web";
-    }
-  }
-  return `<h3 class="sous-titre">Horaires du jour</h3>${corps}${note}${source ? `<p class="note source">${source}</p>` : ""}`;
+  return `<h3 class="sous-titre">Horaires du jour</h3>${corps}${note}`;
 }
 
 function metaVendredi(c) {
