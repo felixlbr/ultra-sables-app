@@ -1,0 +1,1705 @@
+{
+ "schema": 1,
+ "genere_le": "20260916T205122+0200",
+ "pauses": [
+  {
+   "n": 1,
+   "ville": "Alluyes",
+   "km": 92.471,
+   "conseille": "web-alluyes-1",
+   "commerces": [
+    {
+     "id": "web-alluyes-1",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "Boulangerie pâtisserie Martin et Seigneury",
+     "adresse": "20 place du Donjon, 28800 Alluyes",
+     "commune": "Alluyes",
+     "lat": 48.22812,
+     "lon": 1.36338,
+     "km": 92.471,
+     "ecart_m": 6,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "07:00",
+        "13:15"
+       ],
+       [
+        "16:15",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "16:15",
+         "19:00"
+        ]
+       ],
+       "ma": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "16:15",
+         "19:00"
+        ]
+       ],
+       "me": null,
+       "je": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "16:15",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "16:15",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "07:00",
+         "13:15"
+        ]
+       ],
+       "di": [
+        [
+         "07:00",
+         "13:15"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/56789501"
+     }
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "ville": "Mondoubleau",
+   "km": 143.648,
+   "conseille": "osm-n10129719621",
+   "commerces": [
+    {
+     "id": "osm-n10129719621",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "La P'tite Boulange",
+     "adresse": "4 rue du Charme, 41170 Cormenon",
+     "commune": "Cormenon",
+     "lat": 47.96805,
+     "lon": 0.89303,
+     "km": 143.648,
+     "ecart_m": 5,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "07:30",
+        "14:00"
+       ],
+       [
+        "17:00",
+        "19:30"
+       ]
+      ],
+      "semaine": {
+       "lu": [],
+       "ma": null,
+       "me": [
+        [
+         "07:30",
+         "14:00"
+        ],
+        [
+         "17:00",
+         "19:30"
+        ]
+       ],
+       "je": [
+        [
+         "07:30",
+         "14:00"
+        ],
+        [
+         "17:00",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "07:30",
+         "14:00"
+        ],
+        [
+         "17:00",
+         "19:30"
+        ]
+       ],
+       "sa": [
+        [
+         "07:30",
+         "14:00"
+        ],
+        [
+         "17:00",
+         "19:30"
+        ]
+       ],
+       "di": [
+        [
+         "07:30",
+         "13:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://uneboulangerie.fr/41/cormenon/la-p-tite-boulange-161w"
+     }
+    },
+    {
+     "id": "web-mondoubleau-2",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "Les Douceurs de L.E.A.",
+     "adresse": "30 place du Marché, 41170 Mondoubleau",
+     "commune": "Mondoubleau",
+     "lat": 47.98017,
+     "lon": 0.89489,
+     "km": 142.757,
+     "ecart_m": 710,
+     "detour_km": 1.2,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "07:00",
+        "13:00"
+       ],
+       [
+        "16:00",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "07:00",
+         "13:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "ma": null,
+       "me": [],
+       "je": [
+        [
+         "07:00",
+         "13:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "07:00",
+         "13:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "07:00",
+         "13:00"
+        ],
+        [
+         "16:00",
+         "18:30"
+        ]
+       ],
+       "di": [
+        [
+         "07:30",
+         "13:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.villepratique.fr/boulangeries/mondoubleau-41170/les-douceurs-de-lea"
+     },
+     "distance_conseille_m": 1354
+    },
+    {
+     "id": "osm-n8995630507",
+     "type": "supermarche",
+     "sous_type": "convenience",
+     "nom": "CocciMarket",
+     "adresse": "15 place du Marché, 41170 Mondoubleau",
+     "commune": "Mondoubleau",
+     "lat": 47.98106,
+     "lon": 0.89438,
+     "km": 142.749,
+     "ecart_m": 814,
+     "detour_km": 1.3,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "08:00",
+        "20:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "ma": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "me": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "je": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "ve": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "sa": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "di": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.bonial.fr/Magasins/Mondoubleau/Coccimarket-place-du-Marche/v-f519447916"
+     },
+     "distance_conseille_m": 1449
+    },
+    {
+     "id": "web-mondoubleau-3",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "ASCS",
+     "adresse": "14 rue Gheerbrant, 41170 Mondoubleau",
+     "commune": "Mondoubleau",
+     "lat": 47.98112,
+     "lon": 0.89389,
+     "km": 142.757,
+     "ecart_m": 837,
+     "detour_km": 1.3,
+     "horaires": {
+      "source": "aucune",
+      "osm": null,
+      "h24": false,
+      "vendredi": null,
+      "semaine": null,
+      "note": null,
+      "verifie_le": null,
+      "url_source": null
+     },
+     "distance_conseille_m": 1454
+    },
+    {
+     "id": "osm-n5911125664",
+     "type": "supermarche",
+     "sous_type": "supermarket",
+     "nom": "Super U",
+     "adresse": "Route de Cloyes, 41170 Mondoubleau",
+     "commune": "Mondoubleau",
+     "lat": 47.98161,
+     "lon": 0.90823,
+     "km": 141.612,
+     "ecart_m": 298,
+     "detour_km": 1.2,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Sa 08:45-19:15",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:45",
+        "19:15"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:45",
+         "19:15"
+        ]
+       ],
+       "ma": [
+        [
+         "08:45",
+         "19:15"
+        ]
+       ],
+       "me": [
+        [
+         "08:45",
+         "19:15"
+        ]
+       ],
+       "je": [
+        [
+         "08:45",
+         "19:15"
+        ]
+       ],
+       "ve": [
+        [
+         "08:45",
+         "19:15"
+        ]
+       ],
+       "sa": [
+        [
+         "08:45",
+         "19:15"
+        ]
+       ],
+       "di": []
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.au-magasin.fr/41170-mondoubleau/super-u-53099.html"
+     },
+     "distance_conseille_m": 1885
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "ville": "Château-la-Vallière",
+   "km": 218.895,
+   "conseille": "osm-w107623071",
+   "commerces": [
+    {
+     "id": "osm-w107623071",
+     "type": "supermarche",
+     "sous_type": "supermarket",
+     "nom": "Super U",
+     "adresse": "75 avenue du Général de Gaulle, 37330 Château-la-Vallière",
+     "commune": "Château-la-Vallière",
+     "lat": 47.54241,
+     "lon": 0.33582,
+     "km": 218.895,
+     "ecart_m": 84,
+     "detour_km": 0.1,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Sa 09:00-19:30; Su 09:30-12:15",
+      "h24": false,
+      "vendredi": [
+       [
+        "09:00",
+        "19:30"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "09:00",
+         "19:30"
+        ]
+       ],
+       "ma": [
+        [
+         "09:00",
+         "19:30"
+        ]
+       ],
+       "me": [
+        [
+         "09:00",
+         "19:30"
+        ]
+       ],
+       "je": [
+        [
+         "09:00",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "09:00",
+         "19:30"
+        ]
+       ],
+       "sa": [
+        [
+         "09:00",
+         "19:30"
+        ]
+       ],
+       "di": [
+        [
+         "09:30",
+         "12:15"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/00706405"
+     }
+    },
+    {
+     "id": "osm-n13099789518",
+     "type": "supermarche",
+     "sous_type": "convenience",
+     "nom": "Épi Service",
+     "adresse": "4 place d'Armes, 37330 Château-la-Vallière",
+     "commune": "Château-la-Vallière",
+     "lat": 47.54715,
+     "lon": 0.32097,
+     "km": 217.589,
+     "ecart_m": 21,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "08:00-20:00",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:00",
+        "20:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "ma": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "me": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "je": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "ve": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "sa": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ],
+       "di": [
+        [
+         "08:00",
+         "20:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://localiser.laposte.fr/indre-et-loire/chateau-la-valliere/epi-service-906539"
+     },
+     "distance_conseille_m": 1233
+    },
+    {
+     "id": "osm-n10069254010",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "O'Fournil de Max",
+     "adresse": "5 place d'Armes, 37330 Château-la-Vallière",
+     "commune": "Château-la-Vallière",
+     "lat": 47.5471,
+     "lon": 0.32085,
+     "km": 217.59,
+     "ecart_m": 31,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo 07:00-13:00,15:00-19:30; Tu-Sa 07:30-13:00,15:00-19:30; We off; Su 07:30-13:00",
+      "h24": false,
+      "vendredi": [
+       [
+        "07:30",
+        "13:00"
+       ],
+       [
+        "15:00",
+        "19:30"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "07:00",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "ma": [
+        [
+         "07:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "me": [],
+       "je": [
+        [
+         "07:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "07:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "sa": [
+        [
+         "07:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "di": [
+        [
+         "07:30",
+         "12:30"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.myboulange.fr/37/chateau-la-valliere/o-fournil-de-max-30488"
+     },
+     "distance_conseille_m": 1239
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "ville": "Doué-la-Fontaine",
+   "km": 292.979,
+   "conseille": "osm-n8051160447",
+   "commerces": [
+    {
+     "id": "osm-n8051160447",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "L'Atelier",
+     "adresse": "45 rue de Cholet, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.19313,
+     "lon": -0.28339,
+     "km": 292.979,
+     "ecart_m": 9,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "06:30",
+        "13:30"
+       ],
+       [
+        "15:00",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": null,
+       "ma": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "me": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "je": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "di": []
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://uneboulangerie.fr/49/doue-en-anjou/l-atelier-du-boulanger-11op"
+     }
+    },
+    {
+     "id": "osm-w160993825",
+     "type": "supermarche",
+     "sous_type": "supermarket",
+     "nom": "Lidl",
+     "adresse": "1 boulevard Charles de Gaulle, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.19394,
+     "lon": -0.28899,
+     "km": 293.446,
+     "ecart_m": 98,
+     "detour_km": 0.1,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Sa 08:30-19:30; Su 08:30-12:15",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:30",
+        "19:30"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "ma": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "me": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "je": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "sa": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "di": null
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.123catalogue.fr/catalogue/lidl/filiales/doue-en-anjou/725"
+     },
+     "distance_conseille_m": 433
+    },
+    {
+     "id": "osm-w160992853",
+     "type": "supermarche",
+     "sous_type": "supermarket",
+     "nom": "Super U",
+     "adresse": "944 boulevard du Docteur Lionet, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.19123,
+     "lon": -0.28954,
+     "km": 293.538,
+     "ecart_m": 167,
+     "detour_km": 0.3,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Th,Sa 08:30-19:30; Fr 08:30-20:00",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:30",
+        "20:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "ma": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "me": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "je": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "08:30",
+         "20:00"
+        ]
+       ],
+       "sa": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "di": []
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/00864610"
+     },
+     "distance_conseille_m": 511
+    },
+    {
+     "id": "osm-n5125908724",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "Chez Sabrina et Henri",
+     "adresse": "6 place du Champ de Foire, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.19271,
+     "lon": -0.27642,
+     "km": 292.592,
+     "ecart_m": 204,
+     "detour_km": 0.3,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "06:30",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "06:30",
+         "19:00"
+        ]
+       ],
+       "ma": [
+        [
+         "06:30",
+         "19:00"
+        ]
+       ],
+       "me": [],
+       "je": [
+        [
+         "06:30",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "06:30",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "06:30",
+         "19:00"
+        ]
+       ],
+       "di": [
+        [
+         "06:30",
+         "13:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.boulangeries-patisseries.fr/boulangeries/49125-doue-en-anjou/bagbfhbecdehbehcdeba.htm"
+     },
+     "distance_conseille_m": 528
+    },
+    {
+     "id": "osm-n5125921621",
+     "type": "supermarche",
+     "sous_type": "convenience",
+     "nom": "Coco Market",
+     "adresse": "17 rue Foullon, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.19298,
+     "lon": -0.2761,
+     "km": 292.393,
+     "ecart_m": 197,
+     "detour_km": 0.2,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "09:00",
+        "14:00"
+       ],
+       [
+        "16:00",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "09:00",
+         "14:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "ma": [
+        [
+         "09:00",
+         "14:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "me": [
+        [
+         "09:00",
+         "14:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "je": [
+        [
+         "09:00",
+         "14:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "09:00",
+         "14:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "09:00",
+         "14:00"
+        ],
+        [
+         "16:00",
+         "19:00"
+        ]
+       ],
+       "di": null
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/55270550"
+     },
+     "distance_conseille_m": 551
+    },
+    {
+     "id": "osm-w160996391",
+     "type": "supermarche",
+     "sous_type": "convenience",
+     "nom": "Jardin des Frèr'O",
+     "adresse": "1 allée Joseph Touchais, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.18927,
+     "lon": -0.2883,
+     "km": 293.511,
+     "ecart_m": 401,
+     "detour_km": 0.8,
+     "horaires": {
+      "source": "aucune",
+      "osm": null,
+      "h24": false,
+      "vendredi": null,
+      "semaine": null,
+      "note": null,
+      "verifie_le": null,
+      "url_source": null
+     },
+     "distance_conseille_m": 567
+    },
+    {
+     "id": "web-doue-la-fontaine-1",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "Les Douceurs du Layon",
+     "adresse": "1 route d'Argenton, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.18898,
+     "lon": -0.27841,
+     "km": 292.708,
+     "ecart_m": 539,
+     "detour_km": 1.2,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "06:30",
+        "13:00"
+       ],
+       [
+        "15:45",
+        "18:30"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "06:30",
+         "13:00"
+        ],
+        [
+         "15:45",
+         "18:30"
+        ]
+       ],
+       "ma": [
+        [
+         "06:30",
+         "13:00"
+        ],
+        [
+         "15:45",
+         "18:30"
+        ]
+       ],
+       "me": [],
+       "je": [
+        [
+         "06:30",
+         "13:00"
+        ],
+        [
+         "15:45",
+         "18:30"
+        ]
+       ],
+       "ve": [
+        [
+         "06:30",
+         "13:00"
+        ],
+        [
+         "15:45",
+         "18:30"
+        ]
+       ],
+       "sa": [
+        [
+         "07:00",
+         "13:00"
+        ]
+       ],
+       "di": [
+        [
+         "07:00",
+         "13:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.myboulange.fr/49/doue-en-anjou/les-douceurs-du-layon-142042"
+     },
+     "distance_conseille_m": 596
+    },
+    {
+     "id": "osm-w160993506",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "La Fabrique Maison Luçon",
+     "adresse": "1316 boulevard du Docteur Lionet, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.1909,
+     "lon": -0.29587,
+     "km": 294.006,
+     "ecart_m": 64,
+     "detour_km": 0.2,
+     "horaires": {
+      "source": "web",
+      "osm": null,
+      "h24": false,
+      "vendredi": [
+       [
+        "07:00",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ],
+       "ma": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ],
+       "me": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ],
+       "je": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ],
+       "di": [
+        [
+         "07:00",
+         "19:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://lafabrique-maisonlucon.fr/"
+     },
+     "distance_conseille_m": 975
+    },
+    {
+     "id": "osm-n6303876285",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "L'éclat de blé & Banette",
+     "adresse": "20 rue du Puy Notre Dame, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.18837,
+     "lon": -0.2669,
+     "km": 291.258,
+     "ecart_m": 850,
+     "detour_km": 1.1,
+     "horaires": {
+      "source": "aucune",
+      "osm": null,
+      "h24": false,
+      "vendredi": null,
+      "semaine": null,
+      "note": null,
+      "verifie_le": null,
+      "url_source": null
+     },
+     "distance_conseille_m": 1354
+    },
+    {
+     "id": "osm-w160986005",
+     "type": "supermarche",
+     "sous_type": "supermarket",
+     "nom": "Intermarché Super",
+     "adresse": "47 route de Saumur, 49700 Doué-la-Fontaine",
+     "commune": "Doué-la-Fontaine",
+     "lat": 47.19727,
+     "lon": -0.26462,
+     "km": 291.046,
+     "ecart_m": 96,
+     "detour_km": 0.1,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Fr 08:30-20:00; Mo-Th,Sa 08:30-19:30",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:30",
+        "20:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "ma": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "me": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "je": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "08:30",
+         "20:00"
+        ]
+       ],
+       "sa": [
+        [
+         "08:30",
+         "19:30"
+        ]
+       ],
+       "di": null
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/06491510"
+     },
+     "distance_conseille_m": 1491
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "ville": "Saint-Michel-Mont-Mercure",
+   "km": 361.666,
+   "conseille": "osm-n6810863861",
+   "commerces": [
+    {
+     "id": "osm-n6810863861",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "Le Fournil du Sommet",
+     "adresse": "11 place des Relais, 85700 Saint-Michel-Mont-Mercure",
+     "commune": "Saint-Michel-Mont-Mercure",
+     "lat": 46.82934,
+     "lon": -0.88479,
+     "km": 361.666,
+     "ecart_m": 11,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Tu-Sa 06:30-13:30,15:30-19:00; Su,PH 06:30-13:00; Mo off",
+      "h24": false,
+      "vendredi": [
+       [
+        "06:30",
+        "13:30"
+       ],
+       [
+        "15:30",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [],
+       "ma": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "me": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "je": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "06:30",
+         "13:30"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "di": null
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/51912258"
+     }
+    },
+    {
+     "id": "osm-n6810863876",
+     "type": "supermarche",
+     "sous_type": "convenience",
+     "nom": "Vival",
+     "adresse": "9 place des Relais, 85700 Saint-Michel-Mont-Mercure",
+     "commune": "Saint-Michel-Mont-Mercure",
+     "lat": 46.82918,
+     "lon": -0.88449,
+     "km": 361.695,
+     "ecart_m": 10,
+     "detour_km": 0.0,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Sa 08:00-13:00,15:00-19:30; We off; Su 09:00-12:00",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:30",
+        "13:00"
+       ],
+       [
+        "15:00",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "ma": [
+        [
+         "08:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "me": [],
+       "je": [
+        [
+         "08:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "08:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "sa": [
+        [
+         "08:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:00"
+        ]
+       ],
+       "di": [
+        [
+         "09:00",
+         "12:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/62401333"
+     },
+     "distance_conseille_m": 28
+    },
+    {
+     "id": "osm-n6813589954",
+     "type": "boulangerie",
+     "sous_type": "bakery",
+     "nom": "Boulangerie Raveau",
+     "adresse": null,
+     "commune": "La Flocellière",
+     "lat": 46.83178,
+     "lon": -0.86195,
+     "km": 359.802,
+     "ecart_m": 116,
+     "detour_km": 0.2,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Fr 06:30-13:15,15:30-19:30; We off; Sa 07:00-13:00,15:30-19:00; Su 07:00-13:00",
+      "h24": false,
+      "vendredi": [
+       [
+        "07:00",
+        "13:15"
+       ],
+       [
+        "15:30",
+        "19:00"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "ma": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "me": [],
+       "je": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "ve": [
+        [
+         "07:00",
+         "13:15"
+        ],
+        [
+         "15:30",
+         "19:00"
+        ]
+       ],
+       "sa": null,
+       "di": [
+        [
+         "07:00",
+         "13:00"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.facebook.com/boulangerieraveau/posts/horaires-douverture-la-flocellierelundi-mardi-jeudi-vendredi6h30-13h15-15h30-19h/120201993039752/"
+     },
+     "distance_conseille_m": 1759
+    },
+    {
+     "id": "osm-n6813589953",
+     "type": "supermarche",
+     "sous_type": "convenience",
+     "nom": "Utile",
+     "adresse": "2 place du Commerce, 85700 La Flocellière",
+     "commune": "La Flocellière",
+     "lat": 46.83148,
+     "lon": -0.86181,
+     "km": 359.802,
+     "ecart_m": 141,
+     "detour_km": 0.2,
+     "horaires": {
+      "source": "osm+web",
+      "osm": "Mo-Sa 08:00-13:00,15:00-19:30; We 07:30-13:00,15:00-19:30; Su 09:00-12:30",
+      "h24": false,
+      "vendredi": [
+       [
+        "08:00",
+        "13:00"
+       ],
+       [
+        "15:00",
+        "19:30"
+       ]
+      ],
+      "semaine": {
+       "lu": [
+        [
+         "08:00",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "ma": [
+        [
+         "08:00",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "me": [
+        [
+         "07:30",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "je": [
+        [
+         "08:00",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "ve": [
+        [
+         "08:00",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "sa": [
+        [
+         "08:00",
+         "13:00"
+        ],
+        [
+         "15:00",
+         "19:30"
+        ]
+       ],
+       "di": [
+        [
+         "09:00",
+         "12:30"
+        ]
+       ]
+      },
+      "note": null,
+      "verifie_le": "2026-09-16",
+      "url_source": "https://www.pagesjaunes.fr/pros/08369997"
+     },
+     "distance_conseille_m": 1764
+    }
+   ]
+  }
+ ]
+}

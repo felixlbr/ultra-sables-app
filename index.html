@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr" data-theme="nuit">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ultra Sables">
+<meta name="theme-color" content="#000000">
+<meta name="format-detection" content="telephone=no">
+<title>Ultra Sables</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+<script type="module" src="js/main.js"></script>
+</head>
+<body data-vue="trace">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <defs>
+  <symbol id="i-trace" viewBox="0 0 24 24"><path d="M6 22v-7l6-4.5V2.5"/><path d="M8 6.5l4-4 4 4"/></symbol>
+  <symbol id="i-recherche" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21.5 21.5"/></symbol>
+  <symbol id="i-position" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><path d="M12 1.5v5M12 17.5v5M1.5 12h5M17.5 12h5"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-position-off" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><path d="M12 1.5v5M12 17.5v5M1.5 12h5M17.5 12h5M3 3l18 18"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="14" rx="2.5"/><path d="M5 10h14M9 16.5L6.5 21.5M15 16.5l2.5 5"/></symbol>
+  <symbol id="i-droite" viewBox="0 0 24 24"><path d="M9 4.5l7.5 7.5L9 19.5"/></symbol>
+  <symbol id="i-gauche" viewBox="0 0 24 24"><path d="M15 4.5L7.5 12l7.5 7.5"/></symbol>
+  <symbol id="i-vent" viewBox="0 0 24 24"><path d="M12 22V3.5M4.5 10.5L12 3l7.5 7.5"/></symbol>
+  <symbol id="i-danger" viewBox="0 0 24 24"><path d="M12 2.5L22.5 21h-21z"/><path d="M12 9v6M12 17.2v1.6"/></symbol>
+  <symbol id="i-hors-ligne" viewBox="0 0 24 24"><path d="M7 19h10.5a4 4 0 0 0 .9-7.9 6.5 6.5 0 0 0-12.3 1.5A3.3 3.3 0 0 0 7 19z"/><path d="M3 3l18 18"/></symbol>
+  <symbol id="i-partage" viewBox="0 0 24 24"><path d="M12 2.5V15M7 7.5l5-5 5 5"/><path d="M8 11H5v10.5h14V11h-3"/></symbol>
+  <symbol id="i-itineraire" viewBox="0 0 24 24"><path d="M2.5 10.5l19-8-8 19-2.5-8.5z"/></symbol>
+  <symbol id="i-lever" viewBox="0 0 24 24"><path d="M1.5 21h21"/><path d="M6 21a6 6 0 0 1 12 0"/><path d="M12 2v7M8.5 5.5L12 2l3.5 3.5"/><path d="M2.5 14.5l2.5 1.5M21.5 14.5L19 16"/></symbol>
+  <symbol id="i-coucher" viewBox="0 0 24 24"><path d="M1.5 21h21"/><path d="M6 21a6 6 0 0 1 12 0"/><path d="M12 2v7M8.5 5.5L12 9l3.5-3.5"/><path d="M2.5 14.5l2.5 1.5M21.5 14.5L19 16"/></symbol>
+  <symbol id="i-coche" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5L20 6.5"/></symbol>
+ </defs>
+</svg>
+<div class="app">
+ <div class="zone-haut" aria-hidden="true"></div>
+ <main class="defile" id="contenu" tabindex="-1">
+  <p class="message">Chargement du parcours.</p>
+ </main>
+ <nav class="nav" aria-label="Navigation">
+  <a class="onglet" id="onglet-trace" href="#/trace"><svg class="ic" aria-hidden="true"><use href="#i-trace"/></svg>Tracé</a>
+  <a class="onglet" id="onglet-recherche" href="#/recherche"><svg class="ic" aria-hidden="true"><use href="#i-recherche"/></svg>Recherche</a>
+  <button class="actualiser" id="actualiser" type="button"><svg class="ic" aria-hidden="true"><use href="#i-position"/></svg><span id="actualiser-libelle">Actualiser</span></button>
+ </nav>
+</div>
+</body>
+</html>
