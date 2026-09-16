@@ -1,5 +1,5 @@
 // Service worker Ultra Sables (SPEC § 4.6). VERSION réécrite par projet/outils/version.py.
-const VERSION = "v20260916-2112";
+const VERSION = "v20260916-2235";
 const CACHE = "us-" + VERSION;
 
 const PRECACHE = [

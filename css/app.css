@@ -272,7 +272,7 @@ a.ligne:active{background:var(--fond-2)}
 .filtre[aria-pressed="true"]{padding:3px 7px}
 
 /* ============ [v2] Vue Tracé : cases de roadbook (DESIGN § 9) ============ */
-body[data-vue="trace"] .defile{background:var(--page)}
+body[data-vue="trace"] .defile,body[data-vue="pause"] .defile,body[data-vue="commerce"] .defile,body[data-vue="gares"] .defile,body[data-vue="credits"] .defile{background:var(--page)}
 .tete-page{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:0 var(--gout);font-size:16px;color:var(--page-encre-2)}
 .tete-page b{color:var(--encre);font-size:17px}
 .b{position:relative;display:block;margin:0 var(--bloc-marge) var(--interbloc);background:var(--bloc);color:var(--encre);--filet:var(--filet-bloc)}
@@ -351,3 +351,37 @@ body[data-vue="trace"] .credits{color:var(--page-encre-2);padding-top:8px}
 button.lien-alt{margin-left:var(--gout)}
 .alternative button.lien-alt{margin-left:0}
 .ligne .statut{white-space:nowrap}
+
+/* Détail, Gares et Crédits en cases (retours utilisateur du 16/09 au soir) */
+.tete-page.avec-retour .tete-info{text-align:right}
+.tete-page .tete-info{color:var(--page-encre-2)}
+.tete-page .retour{color:var(--encre)}
+.titre-page{padding:2px var(--gout) 10px}
+.lien-page{padding:0 var(--gout) 4px}
+.lien-page button.lien-alt{margin-left:0;color:var(--page-encre-2)}
+.b-entete .titre-vue{padding:8px 0 2px}
+.b-entete .panneau{margin-top:4px}
+.b-in .gare-nom{margin:2px 0 10px}
+.b .duo .chiffre{font-size:32px}
+.duo-case{margin-top:12px}
+.pile-case{display:grid;gap:6px;margin-top:14px}
+.b .signal-detail{margin-top:8px}
+.sous-titre{font-size:16px;font-weight:700;color:var(--encre-2);margin:14px 0 6px}
+.b .horaires td:first-child{padding-left:10px}
+.b .horaires td:last-child{padding-right:0}
+.b .horaires tr.jour-j td:first-child{padding-left:14px}
+.b .note{padding:8px 0 0}
+.note-case{font-size:16px;line-height:1.3;color:var(--encre-2);padding:10px 12px}
+.b-in .note-case{padding:0}
+.b-trains .alternative{padding:8px 12px 0}
+.lien-case{padding:4px 12px}
+.lien-case .discret{padding-left:0}
+.b .vide{padding:0;border:0}
+.b .bouton-2{background:var(--bloc)}
+.credits-in p{font-size:17px;line-height:1.35}
+.credits-in p+p{margin-top:6px}
+@media (min-width:414px){
+  .b .duo .chiffre{font-size:36px}
+  .b-trains .alternative,.lien-case,.note-case{padding-left:14px;padding-right:14px}
+}
+.ligne .statut{white-space:nowrap;max-width:none}

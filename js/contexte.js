@@ -45,6 +45,7 @@ export function calculerContexte(etat, now) {
     gpsEchec: etat.position.statut === "echec" ? etat.position.erreur : null,
     horsLigne: etat.sim.reseau === "hors" || (typeof navigator !== "undefined" && navigator.onLine === false) || etat.meteoEchec === true,
     meteo: etat.meteo,
+    actualise: etat.derniereActualisation ?? now,
   };
 
   if (pos) {

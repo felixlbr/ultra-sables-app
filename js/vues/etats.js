@@ -2,14 +2,23 @@
 import { formatHeure, formatDuree, minutesCourse, hhmmVersMinutes } from "../logique/temps.js";
 import { formatKm, formatEcartPhrase, NBSP } from "../logique/format.js";
 import { heurePlan } from "../logique/plan.js";
-import { barre, esc } from "./commun.js";
+import { barre, esc, tetePage } from "./commun.js";
 import { VERSION } from "../version.js";
 
-export function credits() {
-  return `<footer class="credits" id="credits">`
-    + `<p>Luciole © Laurent Bourcellier &amp; Jonathan Perez (CC BY 4.0).</p>`
-    + `<p>Données © contributeurs OpenStreetMap (ODbL), SNCF (horaires théoriques), Open-Meteo (CC BY 4.0), BRouter.</p>`
-    + `<p>Version ${esc(VERSION)}</p></footer>`;
+// Page Crédits (#/credits), en cases sur le fond de page.
+export function vueCredits(ctx) {
+  return tetePage(ctx, { href: "#/trace", texte: "Tracé" })
+    + `<h1 class="titre-vue titre-page">Crédits</h1>`
+    + `<section class="b" id="credits"><h2 class="b-titre">Police</h2><div class="b-in credits-in">`
+    + `<p>Luciole © Laurent Bourcellier &amp; Jonathan Perez (CC BY 4.0).</p></div></section>`
+    + `<section class="b"><h2 class="b-titre">Données</h2><div class="b-in credits-in">`
+    + `<p>Commerces, points d'eau et tracé : © contributeurs OpenStreetMap (ODbL).</p>`
+    + `<p>Trains : SNCF, horaires théoriques (open data).</p>`
+    + `<p>Météo : Open-Meteo (CC BY 4.0).</p>`
+    + `<p>Itinéraires vélo vers les gares : BRouter.</p>`
+    + `<p>Lever et coucher du soleil : calcul NOAA.</p></div></section>`
+    + `<section class="b"><h2 class="b-titre">Application</h2><div class="b-in credits-in"><p id="version">Version ${esc(VERSION)}</p></div></section>`
+    + `<div class="fin-defile"></div>`;
 }
 
 export function ecranDonneesManquantes() {

@@ -4,11 +4,12 @@ import { formatKm, formatDistance, formatCreneaux, formatCreneau, libelleType, n
 import { statut } from "../logique/ouverture.js";
 import { haversineM } from "../logique/geo.js";
 import { rechercher } from "../logique/recherche.js";
-import { bandeaux, panneau, ligne, titreSection, esc, icone, signal } from "./commun.js";
+import { bandeaux, tetePage, panneau, ligne, esc, icone, signal } from "./commun.js";
 import { arriveeConseille, distancePanneau } from "./trace.js";
 
-function tete(retourHref, retourTexte, info) {
-  return `<header class="tete"><a class="retour" href="${retourHref}">${icone("gauche")}${esc(retourTexte)}</a><p class="tete-info">${info}</p></header>`;
+// Détail en cases (DESIGN § 9, retour utilisateur) : retour et « Actualisé à » sur le fond de page.
+function tete(ctx, retourHref, retourTexte) {
+  return tetePage(ctx, { href: retourHref, texte: retourTexte }) + bandeaux(ctx, { classe: "b" });
 }
 
 function soustitre(c) {
@@ -35,9 +36,9 @@ function blocFermeture(st, arrivee) {
 
 function boutons(c) {
   const ll = `${c.lat},${c.lon}`;
-  return `<div class="pile pile-serree">`
+  return `<section class="b"><h2 class="b-titre masque">Itinéraire</h2><div class="b-in">`
     + `<a class="bouton" href="https://www.google.com/maps/dir/?api=1&amp;destination=${ll}&amp;travelmode=bicycling" target="_blank" rel="noopener">${icone("itineraire")}Itinéraire Google Maps</a>`
-    + `</div>`;
+    + `</div></section>`;
 }
 
 // Horaires du jour de course seulement (retour utilisateur du 16/09) : pas de tableau de la semaine.
@@ -61,7 +62,7 @@ function tableHoraires(h, ctx) {
       source = d ? `Horaires vérifiés le ${d[2]}/${d[1]}` : "Horaires vérifiés sur le web";
     }
   }
-  return `<section class="bloc">${titreSection("Horaires du jour")}${corps}${note}${source ? `<p class="note source">${source}</p>` : ""}</section>`;
+  return `<h3 class="sous-titre">Horaires du jour</h3>${corps}${note}${source ? `<p class="note source">${source}</p>` : ""}`;
 }
 
 function metaVendredi(c) {
@@ -75,7 +76,7 @@ function metaVendredi(c) {
 function autresCommerces(ctx, pause, arriveeConseilleMin) {
   const alts = pause.commerces.slice(1);
   if (!alts.length) {
-    return `<section class="bloc espace-haut">${titreSection(`Autres commerces à ${esc(pause.ville)}`)}<p class="note" id="autres-commerces">Pas d'autre commerce connu à ${esc(pause.ville)}.</p></section>`;
+    return `<section class="b">${`<h2 class="b-titre">Autres commerces à ${esc(pause.ville)}</h2>`}<div class="b-in"><p class="note-case" id="autres-commerces">Pas d'autre commerce connu à ${esc(pause.ville)}.</p></div></section>`;
   }
   const lignes = alts.map((c) => {
     const d = c.distance_conseille_m ?? haversineM(pause.commerces[0].lat, pause.commerces[0].lon, c.lat, c.lon);
@@ -91,30 +92,31 @@ function autresCommerces(ctx, pause, arriveeConseilleMin) {
       extra, droite, droiteSous: sous, classe, href: `#/commerce/${encodeURIComponent(c.id)}?depuis=pause-${pause.n}`,
     });
   }).join("");
-  return `<section class="bloc espace-haut">${titreSection(`Autres commerces à ${esc(pause.ville)}`)}<ol id="autres-commerces">${lignes}</ol></section>`;
+  return `<section class="b"><h2 class="b-titre">Autres commerces à ${esc(pause.ville)}</h2><ol id="autres-commerces">${lignes}</ol></section>`;
 }
 
 function corpsDetail(ctx, c, { arrivee, legendeArrivee }) {
   const st = statut(c.horaires, arrivee);
-  return `<section class="pos pos-detail"><div class="duo">`
+  return `<section class="b b-detail"><h2 class="b-titre masque">Arrivée et horaires du jour</h2><div class="b-in"><div class="duo">`
     + `<div><span class="chiffre">${formatHeure(arrivee)}</span><span class="legende">${legendeArrivee}</span></div>`
     + blocFermeture(st, arrivee)
-    + `</div>${st.etat === "tendu" ? `<p class="signal-detail">${signal(`Ferme à ${formatHeure(st.fermeture)}`)}</p>` : ""}</section>` + boutons(c) + tableHoraires(c.horaires, ctx);
+    + `</div>${st.etat === "tendu" ? `<p class="signal-detail">${signal(`Ferme à ${formatHeure(st.fermeture)}`)}</p>` : ""}`
+    + tableHoraires(c.horaires, ctx) + `</div></section>` + boutons(c);
 }
 
 export function vuePause(ctx, etat, n) {
   const pause = etat.pausesParN.get(n);
   if (!pause) {
-    return bandeaux(ctx) + tete("#/trace", "Tracé", "") + `<p class="message">Pause introuvable.</p>`;
+    return tete(ctx, "#/trace", "Tracé") + `<p class="message">Pause introuvable.</p>`;
   }
   const c = pause.commerces[0];
   const arr = arriveeConseille(ctx, pause);
   const kmCtx = ctx.avantDepart ? { ...ctx, km: 0, horsTraceKm: 0 } : ctx;
   const legende = ctx.modePlan || ctx.avantDepart ? "arrivée prévue" : `arrivée, prévue ${formatHeure(arr.prevue)}`;
-  return bandeaux(ctx)
-    + tete("#/trace", "Tracé", `km ${Math.round(pause.km)} sur le tracé`)
-    + `<div class="detail-tete">${panneau({ cartouche: `Pause ${pause.n}`, km: distancePanneau(kmCtx, pause), ville: pause.ville })}`
-    + `<h1 class="titre-vue">${esc(nomCommerce(c))}</h1><span class="legende">${esc(soustitre(c))}</span></div>`
+  return tete(ctx, "#/trace", "Tracé")
+    + `<section class="b b-pause b-entete"><div class="b-in"><p class="legende">km ${Math.round(pause.km)} sur le tracé</p>`
+    + panneau({ cartouche: `Pause ${pause.n}`, km: distancePanneau(kmCtx, pause), ville: pause.ville })
+    + `<h1 class="titre-vue">${esc(nomCommerce(c))}</h1><span class="legende">${esc(soustitre(c))}</span></div></section>`
     + corpsDetail(ctx, c, { arrivee: arr.estimee, legendeArrivee: legende })
     + autresCommerces(ctx, pause, arr.estimee)
     + `<div class="fin-defile"></div>`;
@@ -132,7 +134,7 @@ function trouverCommerce(etat, id) {
 export function vueCommerce(ctx, etat, id, depuis) {
   const t = trouverCommerce(etat, id);
   const depuisPause = /^pause-(\d+)$/.exec(depuis || "");
-  if (!t) return bandeaux(ctx) + tete("#/trace", "Tracé", "") + `<p class="message">Commerce introuvable.</p>`;
+  if (!t) return tete(ctx, "#/trace", "Tracé") + `<p class="message">Commerce introuvable.</p>`;
   const { c } = t;
   let retourHref = "#/recherche", retourTexte = "Recherche", info = "", arrivee, legende = "arrivée";
 
@@ -162,9 +164,9 @@ export function vueCommerce(ctx, etat, id, depuis) {
     if (sens === "devant") info = `${devant >= 0 ? "+" : "−"}${formatKm(Math.abs(devant))}${NBSP}km devant`;
     else info = `${formatKm(distKm)}${NBSP}km d'ici`;
   }
-  return bandeaux(ctx)
-    + tete(retourHref, retourTexte, info)
-    + `<div class="detail-tete"><h1 class="titre-vue">${esc(nomCommerce(c))}</h1><span class="legende">${esc(soustitre(c))}</span></div>`
+  return tete(ctx, retourHref, retourTexte)
+    + `<section class="b b-entete"><div class="b-in"><p class="legende">${info}</p>`
+    + `<h1 class="titre-vue">${esc(nomCommerce(c))}</h1><span class="legende">${esc(soustitre(c))}</span></div></section>`
     + corpsDetail(ctx, c, { arrivee, legendeArrivee: legende })
     + `<div class="fin-defile"></div>`;
 }

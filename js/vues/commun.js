@@ -35,15 +35,19 @@ export function bandeaux(ctx, options = {}) {
   return h.join("");
 }
 
-// En-tête « Position à 9h26 » ou « Selon le plan à 10h12 ».
+// Ligne de tête (retours utilisateur du 16/09 au soir) : « Actualisé à 21h45 », heure du dernier chargement
+// ou du dernier appui sur Actualiser, dans toutes les vues et tous les états. Le mode plan est signalé par le bandeau GPS.
 export function infoPosition(ctx, suffixeKm) {
-  if (ctx.pos && !ctx.modePlan) {
-    const heure = formatHeure(minutesCourse(ctx.pos.t));
-    const km = suffixeKm ? `, km ${ctx.zoneDepart ? Math.round(ctx.km) + " environ" : formatKm(ctx.km)}` : "";
-    return `Position à <b>${heure}</b>${km}`;
-  }
-  const km = suffixeKm ? `, km ${Math.round(ctx.km)} environ` : "";
-  return `Selon le plan à <b>${formatHeure(ctx.m)}</b>${km}`;
+  const heure = formatHeure(minutesCourse(ctx.actualise ?? ctx.now));
+  let km = "";
+  if (suffixeKm) km = ctx.modePlan || ctx.zoneDepart ? `, km ${Math.round(ctx.km)} environ` : `, km ${formatKm(ctx.km)}`;
+  return `Actualisé à <b>${heure}</b>${km}`;
+}
+
+// Ligne de tête posée sur le fond de page : retour éventuel à gauche, « Actualisé à … ».
+export function tetePage(ctx, retour) {
+  const r = retour ? `<a class="retour" href="${esc(retour.href)}">${icone("gauche")}${esc(retour.texte)}</a>` : "";
+  return `<header class="tete-page${retour ? " avec-retour" : ""}">${r}<p class="tete-info" id="actualise">${infoPosition(ctx, false)}</p></header>`;
 }
 
 export function barre(km, L, coupures) {

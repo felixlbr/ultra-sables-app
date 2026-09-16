@@ -12,7 +12,7 @@ import { vueTrace } from "./vues/trace.js";
 import { vuePause, vueCommerce } from "./vues/pause.js";
 import { vueRecherche } from "./vues/recherche.js";
 import { vueGares, gareAffichee, kmGares } from "./vues/gares.js";
-import { ecranDonneesManquantes } from "./vues/etats.js";
+import { ecranDonneesManquantes, vueCredits } from "./vues/etats.js";
 
 const TOUS_TYPES = ["boulangerie", "supermarche", "eau", "station"];
 const VINGT_MIN = 20 * 60000;
@@ -37,6 +37,7 @@ const etat = {
   cacheProjection: null,
   dernierCtx: null,
   derniereRoute: null,
+  derniereActualisation: null,
 };
 
 const contenu = document.getElementById("contenu");
@@ -65,6 +66,7 @@ function lireRoute() {
     case "commerce": return { vue: "commerce", id: decodeURIComponent(parties.slice(1).join("/")), depuis: params.get("depuis") };
     case "recherche": return { vue: "recherche" };
     case "gares": return { vue: "gares" };
+    case "credits": return { vue: "credits" };
     default: return { vue: "trace" };
   }
 }
@@ -84,6 +86,7 @@ function rendre() {
     case "commerce": html = vueCommerce(ctx, etat, route.id, route.depuis); break;
     case "recherche": html = vueRecherche(ctx, etat); break;
     case "gares": html = vueGares(ctx, etat); break;
+    case "credits": html = vueCredits(ctx, etat); break;
     default: html = vueTrace(ctx, etat);
   }
   contenu.innerHTML = html;
@@ -244,6 +247,7 @@ function basculerFiltre(type) {
 
 async function actualiser() {
   if (etat.position.enCours || !etat.donnees) return;
+  etat.derniereActualisation = maintenant();
   const surGares = lireRoute().vue === "gares";
   const promesseGps = actualiserPosition();
   const promesseMeteo = actualiserMeteo(false);
@@ -286,6 +290,7 @@ window.addEventListener("offline", () => rendre());
 // ---------- Démarrage ----------
 async function demarrer() {
   enregistrerServiceWorker();
+  etat.derniereActualisation = maintenant();
   try {
     await chargerDonnees();
   } catch (e) {

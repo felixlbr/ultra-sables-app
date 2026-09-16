@@ -15,7 +15,8 @@ export function articleProvenance(p) {
 // → { mot, cote, rotation, provenance }. rotation null et cote null pour « Vent faible ».
 export function ventRelatif(directionDeg, vitesseKmh, capDeg) {
   const prov = provenance(directionDeg);
-  if (vitesseKmh < 8) return { mot: "Vent faible", cote: null, rotation: null, provenance: prov, angle: null, categorie: categorieVent(directionDeg, capDeg) };
+  // Seuil sur la vitesse arrondie, comme l'affichage : jamais « Vent faible, 8 km/h ».
+  if (Math.round(vitesseKmh) < 8) return { mot: "Vent faible", cote: null, rotation: null, provenance: prov, angle: null, categorie: categorieVent(directionDeg, capDeg) };
   const a = ((((directionDeg - capDeg + 540) % 360) + 360) % 360) - 180;
   const rotation = (((directionDeg + 180 - capDeg) % 360) + 360) % 360;
   let mot, cote = null;

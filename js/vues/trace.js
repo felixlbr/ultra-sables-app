@@ -9,8 +9,8 @@ import { capAuKm } from "../logique/geo.js";
 import { ventRelatif, provenanceCourte, libelleCategorieVent, provenance } from "../logique/vent.js";
 import { valeursHeure, chercherAlerte } from "../logique/meteo.js";
 import { leverCoucher } from "../logique/soleil.js";
-import { bandeaux, infoPosition, barre, panneau, esc, icone, signal } from "./commun.js";
-import { credits, blocAvantDepart, blocArrivee } from "./etats.js";
+import { bandeaux, tetePage, barre, panneau, esc, icone, signal } from "./commun.js";
+import { blocAvantDepart, blocArrivee } from "./etats.js";
 
 // Heure d'arrivée au commerce conseillé (§ 7.5) : recalculée et prévue.
 export function arriveeConseille(ctx, pause) {
@@ -55,8 +55,7 @@ function caseMeteo(ctx, etat, soleil) {
   const horsReseau = etat.sim.reseau === "hors" || (typeof navigator !== "undefined" && navigator.onLine === false);
   if (vent) {
     const mesure = `${provenanceCourte(vent.provenance)} ${Math.round(val.vitesse)}${NBSP}km/h`;
-    const vieille = ctx.now - meteo.recupere_le > 60 * 60000;
-    const cache = ctx.horsLigne || vieille ? `<span class="vent-mes">à ${formatHeure(minutesCourse(meteo.recupere_le))}</span>` : "";
+    const cache = ""; // pas d'heure dans la case météo (retour utilisateur) : l'heure est dans « Actualisé à »
     if (vent.rotation == null) {
       lignes.push(`<p class="meteo-l meteo-vent" aria-label="Vent faible, ${NOMS_PROVENANCE[vent.provenance]}, ${Math.round(val.vitesse)} km/h">`
         + `<span class="vent-cat" id="vent-mot">Vent faible</span><span class="vent-mes" id="vent-detail">${mesure}</span>${cache}</p>`);
@@ -155,7 +154,8 @@ function caseCheckpoints(ctx, etat) {
 // ---------- Bas de vue ----------
 function basDeVue() {
   return `<p class="lien-train"><a class="discret" id="lien-gares" href="#/gares">${icone("train")}Rentrer en train</a></p>`
-    + credits() + `<div class="fin-defile"></div>`;
+    + `<p class="lien-train"><a class="discret" id="lien-credits" href="#/credits">Crédits</a></p>`
+    + `<div class="fin-defile"></div>`;
 }
 
 export function vueTrace(ctx, etat) {
@@ -168,7 +168,7 @@ export function vueTrace(ctx, etat) {
   if (ctx.avantDepart) {
     const lever = leverCoucher(trace.points[0][0], trace.points[0][1], ctx.jour.dateISO).lever;
     const coucher = leverCoucher(course.arrivee.lat, course.arrivee.lon, ctx.jour.dateISO).coucher;
-    h.push(`<header class="tete-page"><p>Vendredi 18 septembre</p></header>`);
+    h.push(tetePage(ctx));
     h.push(etats);
     h.push(caseMeteo(ctx, etat, { lever, coucher, lectureLever: "Lever du soleil à Saint-Quentin-en-Yvelines", lectureCoucher: "Coucher du soleil à Talmont-Saint-Hilaire" }));
     h.push(caseAlerte(ctx, etat));
@@ -184,7 +184,7 @@ export function vueTrace(ctx, etat) {
   const soleil = { lever: ctx.soleil.lever, coucher: ctx.soleil.coucher, lectureLever: "Lever du soleil", lectureCoucher: "Coucher du soleil" };
 
   if (ctx.arrive) {
-    h.push(`<header class="tete-page"><p>Vendredi 18 septembre</p></header>`);
+    h.push(tetePage(ctx));
     h.push(etats);
     h.push(caseMeteo(ctx, etat, soleil));
     h.push(`<section class="b">${titreCase("Arrivée")}${blocArrivee(ctx, etat.donnees)}</section>`);
@@ -192,7 +192,7 @@ export function vueTrace(ctx, etat) {
     return h.join("");
   }
 
-  h.push(`<header class="tete-page"><p>${infoPosition(ctx, false)}</p></header>`);
+  h.push(tetePage(ctx));
     h.push(etats);
   h.push(caseMeteo(ctx, etat, soleil));
   h.push(caseAlerte(ctx, etat));
