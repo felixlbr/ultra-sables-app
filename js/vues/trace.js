@@ -106,7 +106,7 @@ function casePosition(ctx, coupures) {
   } else {
     const ep = formatEcartPhrase(ctx.e);
     ecart = `<span class="pos-ecart" aria-label="${ep.lecture}"><span id="ecart-valeur">${ep.texte}</span></span>`;
-    bas = `<span id="arrivee-legende">arrivée <b id="arrivee-valeur">${formatHeure(prevue + ctx.eHeures)}</b>, prévue ${formatHeure(prevue)}</span>`;
+    bas = `<span id="arrivee-legende">arrivée <b id="arrivee-valeur">${formatHeure(prevue + ctx.eHeures)}</b></span>`;
   }
   return `<section class="b b-pos${plan ? " estime" : ""}">${titreCase("Position")}<div class="b-in">`
     + `<div class="pos-haut"><span class="pos-km"><b id="km-actuel">${kmTexte}</b>${NBSP}<span id="km-unite">${unite}</span></span>${ecart}</div>`
